@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iotDarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07253a" />
+      <stop offset="100%" stop-color="#021421" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26c0ff" />
+      <stop offset="100%" stop-color="#006699" />
+    </linearGradient>
+    <filter id="sensorGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#26c0ff" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="#f8fafc" />
+
+  <!-- IoT Console Frame -->
+  <g transform="translate(45, 25)">
+    <rect width="710" height="400" rx="20" fill="url(#iotDarkBg)" stroke="#353535" stroke-opacity="0.25" stroke-width="1" />
+
+    <!-- Top Status Bar -->
+    <g transform="translate(24, 20)">
+      <circle cx="6" cy="6" r="5" fill="#ff5f56" />
+      <circle cx="22" cy="6" r="5" fill="#ffbd2e" />
+      <circle cx="38" cy="6" r="5" fill="#27c93f" />
+
+      <text x="64" y="10" font-family="monospace" font-size="11" fill="#797979">ARDUINO_UNO_COM3 · 9600 BAUD · ULTRASONIC_HC-SR04</text>
+
+      <!-- Sensor Status Pill -->
+      <g transform="translate(490, -5)">
+        <rect width="148" height="24" rx="12" fill="rgba(38, 192, 255, 0.15)" stroke="#26c0ff" stroke-width="1" />
+        <circle cx="16" cy="12" r="4" fill="#26c0ff" />
+        <text x="28" y="15.5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10" font-weight="700" fill="#26c0ff">SENSORS ONLINE (95%)</text>
+      </g>
+    </g>
+
+    <line x1="0" y1="48" x2="710" y2="48" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Left: Physical Reservoir & Ultrasonic Wave Diagram -->
+    <g transform="translate(36, 75)">
+      <!-- Reservoir Tank -->
+      <rect x="20" y="20" width="180" height="230" rx="12" fill="none" stroke="#26c0ff" stroke-width="2" stroke-dasharray="6,4" />
+      
+      <!-- Water Fill (Safe Level) -->
+      <rect x="22" y="140" width="176" height="108" rx="8" fill="url(#waterGrad)" opacity="0.85" />
+      <path d="M22,140 Q 66,135 110,140 T 198,140 L 198,248 L 22,248 Z" fill="#26c0ff" opacity="0.6"/>
+
+      <!-- Ultrasonic Sensor Module (HC-SR04) at Top -->
+      <g transform="translate(65, 0)">
+        <rect width="90" height="26" rx="4" fill="#00cc3d" />
+        <circle cx="25" cy="13" r="8" fill="#c7c7c7" stroke="#111" stroke-width="1" />
+        <circle cx="65" cy="13" r="8" fill="#c7c7c7" stroke="#111" stroke-width="1" />
+        <text x="20" y="16" font-family="monospace" font-size="7" font-weight="bold">TX</text>
+        <text x="60" y="16" font-family="monospace" font-size="7" font-weight="bold">RX</text>
+
+        <!-- Sound Waves -->
+        <path d="M 25,28 Q 45,45 65,28" stroke="#26c0ff" stroke-width="2" fill="none" opacity="0.8" />
+        <path d="M 15,42 Q 45,65 75,42" stroke="#26c0ff" stroke-width="2" fill="none" opacity="0.6" />
+        <path d="M 5,56 Q 45,85 85,56" stroke="#26c0ff" stroke-width="2" fill="none" opacity="0.4" />
+      </g>
+
+      <!-- Water Level Reading Label -->
+      <g transform="translate(35, 170)">
+        <rect width="150" height="42" rx="8" fill="rgba(8, 48, 76, 0.85)" stroke="rgba(255,255,255,0.2)" />
+        <text x="14" y="18" font-family="sans-serif" font-size="9" fill="#797979">CURRENT WATER DEPTH</text>
+        <text x="14" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">32.4 cm (NORMAL)</text>
+      </g>
+    </g>
+
+    <!-- Right: Automated Toll Barrier & Telemetry Metrics -->
+    <g transform="translate(270, 75)">
+      <!-- Gate status Card -->
+      <g>
+        <rect width="390" height="120" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        
+        <!-- Toll Gate Pillar & Boom Barrier -->
+        <g transform="translate(30, 25)">
+          <!-- Pillar -->
+          <rect x="0" y="20" width="22" height="50" rx="4" fill="#ffa130" />
+          <circle cx="11" cy="28" r="4" fill="#08304c" />
+          <!-- Boom Barrier Arm (Open Angle: 45deg upward) -->
+          <line x1="11" y1="28" x2="80" y2="4" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+          <line x1="11" y1="28" x2="80" y2="4" stroke="#ff4940" stroke-width="6" stroke-dasharray="10,10" stroke-linecap="round" />
+        </g>
+
+        <!-- Gate status Text -->
+        <g transform="translate(130, 24)">
+          <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Smart Toll Gate: <tspan fill="#00cc3d">OPEN / SAFE</tspan></text>
+          <text x="0" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" fill="#797979">Auto-opens when water is within safe threshold (&lt; 60cm)</text>
+          <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" fill="#797979">Triggers servo lock &amp; flood siren if water &gt; 80cm</text>
+        </g>
+      </g>
+
+      <!-- Key Performance Badges -->
+      <g transform="translate(0, 140)">
+        <rect width="185" height="74" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="18" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="24" font-weight="800" fill="#26c0ff">95%</text>
+        <text x="18" y="48" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#797979">SENSOR DETECTION ACCURACY</text>
+        <text x="18" y="62" font-family="sans-serif" font-size="9" fill="#00cc3d">High precision ultrasonic latency</text>
+
+        <rect x="205" y="0" width="185" height="74" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+        <text x="223" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="24" font-weight="800" fill="#ffa130">70% ↓</text>
+        <text x="223" y="48" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#797979">MANUAL MONITORING EFFORT</text>
+        <text x="223" y="62" font-family="sans-serif" font-size="9" fill="#26c0ff">Automated gate servo response</text>
+      </g>
+
+      <!-- Interactive Callout -->
+      <g transform="translate(0, 235)">
+        <rect width="390" height="38" rx="10" fill="rgba(38, 192, 255, 0.12)" stroke="#26c0ff" stroke-width="1" />
+        <text x="16" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" font-weight="600" fill="#e8f1ff">🌊 Click card to test Interactive Water Level &amp; Barrier Simulator</text>
+      </g>
+    </g>
+  </g>
+</svg>

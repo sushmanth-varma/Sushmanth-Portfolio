@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mlDarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08304c" />
+      <stop offset="100%" stop-color="#051f33" />
+    </linearGradient>
+    <linearGradient id="rainbowBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#26c0ff" />
+      <stop offset="50%" stop-color="#ffa130" />
+      <stop offset="100%" stop-color="#00cc3d" />
+    </linearGradient>
+    <filter id="glowAcc" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00cc3d" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc" />
+
+  <!-- Main AI/ML Terminal Dashboard Frame -->
+  <g transform="translate(45, 25)">
+    <rect width="710" height="400" rx="20" fill="url(#mlDarkBg)" stroke="#353535" stroke-opacity="0.2" stroke-width="1" />
+
+    <!-- Top Window Chrome -->
+    <g transform="translate(24, 20)">
+      <circle cx="6" cy="6" r="5" fill="#ff5f56" />
+      <circle cx="22" cy="6" r="5" fill="#ffbd2e" />
+      <circle cx="38" cy="6" r="5" fill="#27c93f" />
+
+      <text x="64" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Inter', monospace" font-size="11" fill="#797979">scikit_learn_pipeline.py · 2,000+ Records Trained</text>
+
+      <!-- Pill status -->
+      <g transform="translate(510, -5)">
+        <rect width="130" height="24" rx="12" fill="rgba(0, 204, 61, 0.15)" stroke="#00cc3d" stroke-width="1" />
+        <circle cx="16" cy="12" r="4" fill="#00cc3d" />
+        <text x="28" y="15.5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10" font-weight="700" fill="#00cc3d">MODEL EVALUATION</text>
+      </g>
+    </g>
+
+    <line x1="0" y1="48" x2="710" y2="48" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Left Column: Circular Accuracy Gauge & Stat Badges -->
+    <g transform="translate(36, 75)">
+      <!-- Radial Meter Background -->
+      <circle cx="95" cy="95" r="75" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14" />
+      <!-- Radial Meter 85% Progress -->
+      <circle cx="95" cy="95" r="75" fill="none" stroke="#00cc3d" stroke-width="14" 
+              stroke-dasharray="471" stroke-dashoffset="70" stroke-linecap="round" 
+              transform="rotate(-90 95 95)" filter="url(#glowAcc)" />
+      
+      <!-- Inner text -->
+      <text x="95" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="34" font-weight="800" fill="#ffffff">85%</text>
+      <text x="95" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" font-weight="600" fill="#d7ffe2" letter-spacing="1">ACCURACY</text>
+
+      <!-- Sub metrics -->
+      <g transform="translate(0, 195)">
+        <rect width="90" height="52" rx="10" fill="rgba(255,255,255,0.05)" />
+        <text x="14" y="22" font-family="sans-serif" font-size="9" fill="#797979">PRECISION</text>
+        <text x="14" y="40" font-family="sans-serif" font-size="16" font-weight="700" fill="#ffffff">86.2%</text>
+
+        <rect x="100" y="0" width="90" height="52" rx="10" fill="rgba(255,255,255,0.05)" />
+        <text x="114" y="22" font-family="sans-serif" font-size="9" fill="#797979">RECALL</text>
+        <text x="114" y="40" font-family="sans-serif" font-size="16" font-weight="700" fill="#26c0ff">84.8%</text>
+
+        <rect x="0" y="60" width="190" height="42" rx="10" fill="rgba(255,255,255,0.05)" />
+        <text x="14" y="24" font-family="sans-serif" font-size="10" fill="#797979">ROC-AUC SCORE:</text>
+        <text x="120" y="25" font-family="sans-serif" font-size="13" font-weight="700" fill="#ffa130">0.912 AUC</text>
+      </g>
+    </g>
+
+    <!-- Right Column: 8 Key Influencing Factors (Feature Importance) -->
+    <g transform="translate(265, 75)">
+      <text x="0" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Top Feature Importance (Random Forest &amp; XGBoost)</text>
+      <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" fill="#797979">Extracted from 2,000+ undergraduate student placement records</text>
+
+      <!-- Bars -->
+      <!-- 1. CGPA -->
+      <g transform="translate(0, 48)">
+        <text x="0" y="12" font-family="monospace" font-size="10.5" fill="#ffffff">1. Academic CGPA (weight: 35%)</text>
+        <rect x="0" y="18" width="400" height="9" rx="4.5" fill="rgba(255,255,255,0.1)" />
+        <rect x="0" y="18" width="350" height="9" rx="4.5" fill="#26c0ff" />
+      </g>
+
+      <!-- 2. DSA / Coding Assessment -->
+      <g transform="translate(0, 84)">
+        <text x="0" y="12" font-family="monospace" font-size="10.5" fill="#ffffff">2. DSA / Coding Score (weight: 25%)</text>
+        <rect x="0" y="18" width="400" height="9" rx="4.5" fill="rgba(255,255,255,0.1)" />
+        <rect x="0" y="18" width="280" height="9" rx="4.5" fill="#e600c2" />
+      </g>
+
+      <!-- 3. Internship Experience -->
+      <g transform="translate(0, 120)">
+        <text x="0" y="12" font-family="monospace" font-size="10.5" fill="#ffffff">3. Prior Internships Count (weight: 20%)</text>
+        <rect x="0" y="18" width="400" height="9" rx="4.5" fill="rgba(255,255,255,0.1)" />
+        <rect x="0" y="18" width="220" height="9" rx="4.5" fill="#ffa130" />
+      </g>
+
+      <!-- 4. Projects Portfolio -->
+      <g transform="translate(0, 156)">
+        <text x="0" y="12" font-family="monospace" font-size="10.5" fill="#ffffff">4. Full-Stack / ML Projects (weight: 12%)</text>
+        <rect x="0" y="18" width="400" height="9" rx="4.5" fill="rgba(255,255,255,0.1)" />
+        <rect x="0" y="18" width="160" height="9" rx="4.5" fill="#ffc837" />
+      </g>
+
+      <!-- 5. Active Backlogs Penalty -->
+      <g transform="translate(0, 192)">
+        <text x="0" y="12" font-family="monospace" font-size="10.5" fill="#ff4940">5. Backlog History (Negative Correlation: -15%)</text>
+        <rect x="0" y="18" width="400" height="9" rx="4.5" fill="rgba(255,255,255,0.1)" />
+        <rect x="0" y="18" width="130" height="9" rx="4.5" fill="#ff4940" />
+      </g>
+
+      <!-- Bottom Interactive Tag -->
+      <g transform="translate(0, 240)">
+        <rect width="400" height="36" rx="10" fill="rgba(0, 204, 61, 0.12)" stroke="#00cc3d" stroke-width="1" />
+        <text x="14" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#d7ffe2">⚡ Click card to launch Interactive ML Placement Predictor Simulator</text>
+      </g>
+    </g>
+  </g>
+</svg>

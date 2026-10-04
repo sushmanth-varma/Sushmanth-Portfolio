@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 600" width="100%" height="100%">
+  <defs>
+    <!-- Purple Hoodie Gradient -->
+    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a2be2" />
+      <stop offset="100%" stop-color="#5a189a" />
+    </linearGradient>
+    <!-- Skin Tone Gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd5b5" />
+      <stop offset="100%" stop-color="#f1b58a" />
+    </linearGradient>
+    <filter id="stickerShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Decorative Splatters & Blobs -->
+  <g id="decorations">
+    <!-- Big Purple Splash Wave -->
+    <path d="M 280,40 Q 420,-10 500,80 Q 550,180 500,280 Q 460,240 380,260 Z" fill="#7928ca" opacity="0.35" />
+    <!-- Electric Blue Blob -->
+    <path d="M 30,120 Q 90,40 160,90 Q 180,180 110,210 Q 50,220 30,120 Z" fill="#0070f3" opacity="0.3" />
+
+    <!-- Yellow Doodle Crown above Head -->
+    <path d="M 215,95 L 235,120 L 260,90 L 285,120 L 305,95 L 295,135 L 225,135 Z" fill="#ffd600" stroke="#000000" stroke-width="3" stroke-linejoin="round" />
+    <circle cx="215" cy="92" r="4" fill="#ffd600" stroke="#000" stroke-width="2"/>
+    <circle cx="260" cy="87" r="4" fill="#ffd600" stroke="#000" stroke-width="2"/>
+    <circle cx="305" cy="92" r="4" fill="#ffd600" stroke="#000" stroke-width="2"/>
+
+    <!-- Yellow Sparkle Stars -->
+    <polygon points="460,70 466,85 482,85 470,95 474,110 460,100 446,110 450,95 438,85 454,85" fill="#ffd600" />
+    <polygon points="110,90 114,100 126,100 117,108 120,118 110,111 100,118 103,108 94,100 106,100" fill="#ffd600" />
+    <polygon points="490,260 494,270 505,270 497,276 500,286 490,280 480,286 483,276 475,270 486,270" fill="#00df89" />
+
+    <!-- Neon Green Lightning Bolt -->
+    <polygon points="450,340 470,300 455,300 465,270 435,315 450,315" fill="#00df89" stroke="#000" stroke-width="2" />
+
+    <!-- Doodle Squiggles & Arrows -->
+    <path d="M 440,160 Q 465,140 490,165 T 520,150" fill="none" stroke="#26c0ff" stroke-width="4" stroke-linecap="round" />
+    <path d="M 70,220 Q 90,250 80,280 T 110,310" fill="none" stroke="#ff4940" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Speech Bubble: "LET'S CREATE SOMETHING AWESOME!" -->
+    <g transform="translate(290, 45)" filter="url(#stickerShadow)">
+      <rect width="210" height="52" rx="22" fill="#0070f3" stroke="#000000" stroke-width="2.5" />
+      <polygon points="340,97 360,97 345,115" fill="#0070f3" stroke="#000000" stroke-width="2" />
+      <text x="105" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">LET'S CREATE</text>
+      <text x="105" y="42" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="900" fill="#ffd600" letter-spacing="0.5">SOMETHING AWESOME!</text>
+    </g>
+  </g>
+
+  <!-- Main Animated Character: Sushmanth Varma -->
+  <g id="character" filter="url(#stickerShadow)">
+    
+    <!-- Body & Hoodie -->
+    <g id="hoodie">
+      <!-- Torso -->
+      <path d="M 170,390 Q 255,370 340,390 L 380,590 L 130,590 Z" fill="url(#hoodieGrad)" stroke="#090d16" stroke-width="4" />
+      
+      <!-- Hoodie Pocket -->
+      <path d="M 190,490 Q 255,475 320,490 L 330,570 L 180,570 Z" fill="#4c1182" stroke="#090d16" stroke-width="3" />
+
+      <!-- Hoodie Collar & Strings -->
+      <path d="M 205,370 Q 255,435 305,370 Q 285,415 255,420 Q 225,415 205,370 Z" fill="#240046" stroke="#090d16" stroke-width="3" />
+      <line x1="235" y1="410" x2="230" y2="475" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <line x1="275" y1="410" x2="280" y2="470" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <circle cx="230" cy="477" r="4" fill="#ffd600" stroke="#000" stroke-width="1.5" />
+      <circle cx="280" cy="472" r="4" fill="#ffd600" stroke="#000" stroke-width="1.5" />
+
+      <!-- Left Arm & Clapperboard / Code Device -->
+      <path d="M 335,395 Q 390,440 405,510 L 360,530 Q 345,460 310,430 Z" fill="url(#hoodieGrad)" stroke="#090d16" stroke-width="4" />
+      
+      <!-- Tech Clapperboard / Laptop Device -->
+      <g transform="translate(370, 480) rotate(-15)">
+        <rect width="65" height="48" rx="8" fill="#1e293b" stroke="#000000" stroke-width="3" />
+        <rect x="0" y="0" width="65" height="14" rx="4" fill="#000000" />
+        <polygon points="10,0 20,0 10,14 0,14" fill="#ffffff" />
+        <polygon points="30,0 40,0 30,14 20,14" fill="#ffffff" />
+        <polygon points="50,0 60,0 50,14 40,14" fill="#ffffff" />
+        <polygon points="26,22 42,32 26,42" fill="#ffd600" />
+      </g>
+    </g>
+
+    <!-- Waving Right Arm -->
+    <g id="waving-arm">
+      <!-- Upper Arm & Forearm -->
+      <path d="M 180,395 Q 120,360 110,280 L 155,270 Q 165,330 215,385 Z" fill="url(#hoodieGrad)" stroke="#090d16" stroke-width="4" />
+      <!-- Waving Hand -->
+      <g transform="translate(100, 200)">
+        <!-- Palm -->
+        <rect x="15" y="45" width="44" height="42" rx="14" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3.5" />
+        <!-- Thumb -->
+        <path d="M 52,65 Q 68,60 62,48 Q 54,42 45,55 Z" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+        <!-- Index Finger -->
+        <rect x="42" y="8" width="13" height="44" rx="6.5" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+        <!-- Middle Finger -->
+        <rect x="27" y="2" width="13" height="50" rx="6.5" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+        <!-- Ring Finger -->
+        <rect x="12" y="8" width="13" height="44" rx="6.5" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+        <!-- Pinky Finger -->
+        <rect x="-1" y="20" width="12" height="34" rx="6" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+
+        <!-- Waving Motion Lines -->
+        <path d="M 68,20 Q 82,32 76,46" fill="none" stroke="#ffd600" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M 80,14 Q 96,28 90,44" fill="none" stroke="#00df89" stroke-width="3" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Head & Face -->
+    <g id="head">
+      <!-- Neck -->
+      <rect x="235" y="325" width="42" height="60" rx="12" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3.5" />
+
+      <!-- Ears -->
+      <ellipse cx="178" cy="275" rx="14" ry="18" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+      <ellipse cx="332" cy="275" rx="14" ry="18" fill="url(#skinGrad)" stroke="#090d16" stroke-width="3" />
+      <!-- Earring stud -->
+      <circle cx="332" cy="285" r="3" fill="#ffd600" stroke="#000" stroke-width="1.5" />
+
+      <!-- Face Shape -->
+      <path d="M 180,240 Q 180,350 255,350 Q 330,350 330,240 Q 330,165 255,165 Q 180,165 180,240 Z" fill="url(#skinGrad)" stroke="#090d16" stroke-width="4" />
+
+      <!-- Anime Hair (Voluminous, stylish spikes, rich dark espresso) -->
+      <path d="M 175,220 Q 160,130 220,110 Q 255,75 300,105 Q 355,90 350,170 Q 365,190 355,230 Q 345,190 330,180 Q 315,140 280,160 Q 240,135 220,170 Q 190,175 175,220 Z" fill="#0f172a" stroke="#000000" stroke-width="4" />
+      <!-- Hair Fringe Details -->
+      <path d="M 210,170 Q 240,210 235,230 Q 245,190 270,185 Q 295,215 310,225 Q 315,180 330,195" fill="#0f172a" stroke="#000000" stroke-width="3" />
+
+      <!-- Cool Glasses Frame -->
+      <g id="glasses">
+        <rect x="195" y="235" width="50" height="34" rx="10" fill="rgba(255,255,255,0.2)" stroke="#090d16" stroke-width="4.5" />
+        <rect x="265" y="235" width="50" height="34" rx="10" fill="rgba(255,255,255,0.2)" stroke="#090d16" stroke-width="4.5" />
+        <!-- Bridge -->
+        <line x1="245" y1="248" x2="265" y2="248" stroke="#090d16" stroke-width="4.5" />
+        <!-- Glasses Temples -->
+        <line x1="195" y1="245" x2="178" y2="250" stroke="#090d16" stroke-width="4" />
+        <line x1="315" y1="245" x2="332" y2="250" stroke="#090d16" stroke-width="4" />
+        <!-- Glass Sheen Reflection -->
+        <line x1="205" y1="242" x2="225" y2="262" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+        <line x1="275" y1="242" x2="295" y2="262" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+      </g>
+
+      <!-- Eyes: Right eye open & friendly, Left eye winking playfully! -->
+      <!-- Left Eye (Wink) -->
+      <path d="M 208,252 Q 220,262 232,252" fill="none" stroke="#090d16" stroke-width="4" stroke-linecap="round" />
+      <!-- Right Eye (Open with sparkle) -->
+      <ellipse cx="290" cy="252" rx="10" ry="12" fill="#090d16" />
+      <circle cx="287" cy="248" r="4" fill="#ffffff" />
+      <circle cx="293" cy="256" r="2" fill="#ffffff" />
+
+      <!-- Eyebrows -->
+      <path d="M 202,225 Q 220,215 238,225" fill="none" stroke="#090d16" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M 272,222 Q 290,212 308,222" fill="none" stroke="#090d16" stroke-width="4.5" stroke-linecap="round" />
+
+      <!-- Cute Anime Nose -->
+      <path d="M 252,270 Q 256,280 250,283" fill="none" stroke="#c28863" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Big Friendly Smile -->
+      <path d="M 230,296 Q 255,325 280,296 Z" fill="#991b1b" stroke="#090d16" stroke-width="3.5" />
+      <!-- Teeth -->
+      <path d="M 233,296 Q 255,306 277,296 Z" fill="#ffffff" />
+      <!-- Tongue -->
+      <path d="M 242,310 Q 255,316 268,310 Q 255,324 242,310 Z" fill="#ff70a6" />
+
+      <!-- Cute Cheek Blushes -->
+      <ellipse cx="196" cy="285" rx="8" ry="4" fill="#ff4940" opacity="0.45" />
+      <ellipse cx="314" cy="285" rx="8" ry="4" fill="#ff4940" opacity="0.45" />
+    </g>
+  </g>
+</svg>

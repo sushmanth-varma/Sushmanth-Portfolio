@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="galBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#141a29" />
+    </linearGradient>
+    <filter id="thumbShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#galBg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="100" r="140" fill="#0070f3" opacity="0.12" filter="blur(50px)" />
+  <circle cx="650" cy="350" r="160" fill="#7928ca" opacity="0.15" filter="blur(60px)" />
+
+  <!-- Browser Frame -->
+  <g transform="translate(40, 24)">
+    <rect width="720" height="402" rx="20" fill="#111726" stroke="#253046" stroke-width="1.5" />
+
+    <!-- Top Window Chrome -->
+    <rect width="720" height="44" rx="20" fill="#161f33" />
+    <circle cx="28" cy="22" r="5" fill="#ff5f56" />
+    <circle cx="44" cy="22" r="5" fill="#ffbd2e" />
+    <circle cx="60" cy="22" r="5" fill="#27c93f" />
+
+    <text x="360" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Interactive Image Gallery · Dynamic Lightbox</text>
+
+    <!-- Category Filter Tabs -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="60" height="26" rx="13" fill="#26c0ff" />
+      <text x="30" y="17" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0b1329">ALL</text>
+
+      <rect x="70" y="0" width="76" height="26" rx="13" fill="#1b253b" />
+      <text x="108" y="17" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">NATURE</text>
+
+      <rect x="156" y="0" width="76" height="26" rx="13" fill="#1b253b" />
+      <text x="194" y="17" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">ANIMALS</text>
+
+      <rect x="242" y="0" width="76" height="26" rx="13" fill="#1b253b" />
+      <text x="280" y="17" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">WALLPAPERS</text>
+
+      <rect x="328" y="0" width="60" height="26" rx="13" fill="#1b253b" />
+      <text x="358" y="17" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">CITY</text>
+    </g>
+
+    <!-- Gallery Grid (3 columns x 2 rows) -->
+    <g transform="translate(30, 102)">
+      <!-- Tile 1: Ocean Sunset -->
+      <g filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#0f3460" />
+        <circle cx="103" cy="80" r="28" fill="#ffa130" opacity="0.8" />
+        <path d="M0,85 Q 50,75 103,85 T 206,85 L 206,128 L 0,128 Z" fill="#0c2340" />
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Ocean Sunset</text>
+      </g>
+
+      <!-- Tile 2: Straw Hat Pirates Wallpaper -->
+      <g transform="translate(226, 0)" filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#6a040f" />
+        <circle cx="103" cy="55" r="32" fill="#ffd166" opacity="0.4" />
+        <polygon points="103,30 115,55 140,55 120,70 128,95 103,80 78,95 86,70 66,55 91,55" fill="#ffd166" />
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Anime StrawHat Collection</text>
+      </g>
+
+      <!-- Tile 3: Alpine Forest -->
+      <g transform="translate(452, 0)" filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#1b4332" />
+        <polygon points="60,110 90,40 120,110" fill="#2d6a4f" />
+        <polygon points="110,110 140,50 170,110" fill="#40916c" />
+        <polygon points="20,110 50,60 80,110" fill="#52b788" />
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Lush Pine Forest</text>
+      </g>
+
+      <!-- Tile 4: Golden Eagle Bird -->
+      <g transform="translate(0, 144)" filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#3a0ca3" />
+        <circle cx="160" cy="45" r="22" fill="#ffebd6" opacity="0.3" />
+        <path d="M 40,80 Q 90,40 150,70 Q 120,90 80,85 Z" fill="#ffd166" />
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Bird Wildlife</text>
+      </g>
+
+      <!-- Tile 5: Active Lightbox Preview Center -->
+      <g transform="translate(226, 144)" filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#240046" stroke="#26c0ff" stroke-width="2" />
+        <circle cx="103" cy="50" r="28" fill="#e600c2" opacity="0.6" />
+        <polygon points="103,15 170,75 140,110 66,110 36,75" fill="#7928ca" opacity="0.5" />
+        <rect x="73" y="40" width="60" height="24" rx="12" fill="#ffffff" />
+        <text x="103" y="56" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#111726">🔍 VIEW</text>
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#26c0ff">Dynamic Lightbox Open</text>
+      </g>
+
+      <!-- Tile 6: Mountain Peaks -->
+      <g transform="translate(452, 144)" filter="url(#thumbShadow)">
+        <rect width="206" height="128" rx="14" fill="#1e293b" />
+        <polygon points="50,110 100,30 150,110" fill="#475569" />
+        <polygon points="110,110 155,45 200,110" fill="#64748b" />
+        <polygon points="100,30 85,55 115,55" fill="#f8fafc" />
+        <text x="14" y="114" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Mountain Panorama</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dommaraju Sushmanth Varma · Software Engineer &amp; Front-End Developer</title>
+  <meta name="description"
+    content="Personal portfolio of Dommaraju Sushmanth Varma — Software Engineer and Front-End Developer based in Chennai, India. Specializing in clean code, responsive web apps, UI/UX, and AI/ML systems.">
+  <meta name="author" content="Dommaraju Sushmanth Varma">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0d14'/><circle cx='16' cy='16' r='8' fill='%237928ca'/><polygon points='16,10 18,14 22,14 19,17 20,21 16,18 12,21 13,17 10,14 14,14' fill='%23ffd600'/></svg>">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Caveat:wght@600;700&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="theme-dark">
+
+  <!-- BACKGROUND AMBIENT PAINT SPLASHES & DOODLES -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="blob blob-purple-top"></div>
+    <div class="blob blob-blue-top"></div>
+    <div class="blob blob-cyan-mid"></div>
+    <div class="blob blob-purple-bottom"></div>
+    <!-- Floating Background Doodles -->
+    <span class="doodle doodle-star star-1">★</span>
+    <span class="doodle doodle-star star-2">★</span>
+    <span class="doodle doodle-star star-3">✦</span>
+    <span class="doodle doodle-bolt bolt-1">⚡</span>
+    <span class="doodle doodle-bolt bolt-2">⚡</span>
+    <span class="doodle doodle-smiley smiley-1">ツ</span>
+    <span class="doodle doodle-crown crown-1">👑</span>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- FLOATING PILL NAV (Sticky, 28px radius) -->
+  <header class="nav-wrapper" id="navbar">
+    <nav class="pill-nav" aria-label="Main Navigation">
+      <!-- Left: Wordmark with glowing dot -->
+      <a href="#hero" class="brand-link" aria-label="Go to home">
+        <span class="neon-dot" aria-hidden="true"></span>
+        <span class="brand-wordmark">SUSHMANTH.</span>
+      </a>
+
+      <!-- Center: Freelance Status Pill -->
+      <div class="status-pill-center">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span class="status-text">Available for Freelance &amp; Roles</span>
+      </div>
+
+      <!-- Right: Navigation Links + Let's Talk CTA -->
+      <div class="nav-right">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#numbers" class="nav-link">Stats</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Primary Glow CTA -->
+        <a href="#contact" class="btn-glow-cta cta-nav">Let's Talk</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#numbers" class="mobile-nav-link">Stats</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="#contact" class="btn-glow-cta" style="width: 100%; text-align: center;">Let's Talk →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="page-container">
+
+    <!-- ════════════════════════════════════════════════════════════
+         HERO SECTION (Dikshant Aesthetic: Playful Character & Doodles)
+    ════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-creative-layout">
+
+        <!-- Left Side: Typography & Intro -->
+        <div class="hero-text-block">
+          <div class="handwritten-intro">
+            <span class="script-tag">Hey, I'm</span>
+            <svg class="handwritten-arrow" width="36" height="32" viewBox="0 0 40 36" fill="none">
+              <path d="M 5,5 Q 15,28 32,26" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              <path d="M 24,18 L 32,26 L 24,32" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"
+                fill="none" />
+            </svg>
+          </div>
+
+          <div class="title-with-crown">
+            <h1 class="hero-name-title">SUSHMANTH</h1>
+            <span class="hero-floating-crown" aria-hidden="true">👑</span>
+          </div>
+
+          <p class="hero-roles-bar">
+            <span>Software Engineer</span>
+            <span class="role-sep">•</span>
+            <span>Front-End Developer</span>
+            <span class="role-sep">•</span>
+            <span>Creative Problem Solver</span>
+          </p>
+
+          <p class="hero-subtext">
+            Crafting fast, bold, and responsive web experiences, machine learning applications, and delightful digital
+            interfaces with clean code and thoughtful UX.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-buttons-row">
+            <button type="button" class="btn-play-showreel" id="openShowreelBtn">
+              <span class="play-circle">▶</span>
+              <span>Watch Showreel</span>
+            </button>
+            <a href="#projects" class="btn-view-projects">
+              <span>View Projects</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Mouse Scroll Down Indicator -->
+          <div class="scroll-down-wrapper">
+            <a href="#showreelSection" class="scroll-mouse-pill" aria-label="Scroll down">
+              <span class="mouse-wheel"></span>
+            </a>
+            <span class="scroll-text">Scroll Down</span>
+          </div>
+        </div>
+
+        <!-- Right Side: AI Character Model of Sushmanth Varma -->
+        <div class="hero-avatar-block">
+          <div class="character-wrapper">
+            <img src="assets/images/WhatsApp Image 2026-10-04 at 3.15.49 PM.jpeg"
+              alt="Dommaraju Sushmanth Varma illustrated AI character model waving friendly"
+              class="sushmanth-avatar-svg" loading="eager">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         SHOWREEL / HIGHLIGHTS SECTION
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper showreel-section" id="showreelSection">
+      <div class="showreel-card">
+        <div class="showreel-info-side">
+          <div class="showreel-eyebrow">
+            <span class="star-icon">☆</span>
+            <span>PORTFOLIO TOUR</span>
+          </div>
+          <h2 class="showreel-heading">Interactive Tour</h2>
+          <p class="showreel-desc">
+            A quick glimpse of my full-stack web builds, machine learning prediction models, and IoT automation systems.
+          </p>
+          <button type="button" class="btn-inline-play" id="launchTourBtn">
+            <span>Explore Tour</span>
+            <span class="play-icon-tiny">▶</span>
+          </button>
+        </div>
+
+        <div class="showreel-visual-side" id="showreelPosterTrigger">
+          <div class="showreel-poster-backdrop">
+            <img src="assets/images/project_multimedia.jpg" alt="Interactive Tour Preview" class="showreel-poster-img"
+              loading="lazy">
+            <div class="showreel-play-overlay">
+              <div class="big-play-btn" aria-hidden="true">
+                <span>▶</span>
+              </div>
+            </div>
+            <div class="showreel-tag-live">9 Live Case Studies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         FEATURED PROJECTS SECTION (9 Complete Projects)
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper projects-section" id="projects">
+      <div class="projects-section-header">
+        <div class="section-title-doodle-wrap">
+          <h2 class="section-heading-dikshant">
+            FEATURED PROJECTS
+            <span class="wavy-doodle" aria-hidden="true">〰️</span>
+          </h2>
+          <p class="section-sub-dikshant">
+            Click any project to open live deployed sites, test accuracy metrics, or launch system simulations.
+          </p>
+        </div>
+        <a href="#contact" class="view-all-projects-link">
+          <span>Let's Build Together</span>
+          <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+
+      <!-- 9 Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- ════ PROJECT 1: MultiMedia World ════ -->
+        <article class="dikshant-project-card" data-project-id="multimedia" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_multimedia.jpg" alt="MultiMedia World UI Mockup" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-purple">Web Streaming</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Project &amp; Deploy URL ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">MultiMedia World — Music, Video &amp; Image Hub</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">HTML5</span>
+              <span class="badge-chip">CSS3</span>
+              <span class="badge-chip">Audio/Video</span>
+              <span class="badge-chip">YouTube iFrames</span>
+            </div>
+            <p class="card-desc">
+              Single-page multimedia streaming site with 5 music tracks, 5 movie trailers, and a 4-column responsive
+              image gallery.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight green-glow">✓ 100% W3C Validated</span>
+              <span class="open-link-text">Explore Project ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 2: Incredible India ════ -->
+        <article class="dikshant-project-card" data-project-id="india" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_india.svg" alt="Incredible India Travel Guide UI" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-cyan">Travel Guide</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Project &amp; Deploy URL ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Incredible India — Immersive Travel Guide</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">JavaScript</span>
+              <span class="badge-chip">Google Maps</span>
+              <span class="badge-chip">Accordion UX</span>
+              <span class="badge-chip">Awwwards Style</span>
+            </div>
+            <p class="card-desc">
+              Travel guide covering 6 Indian states and 30 destinations with a two-level accordion UX and GPS
+              coordinates.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight cyan-glow">⚡ Lighthouse 95+ Score</span>
+              <span class="open-link-text">Explore Project ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 3: Course Registration Form ════ -->
+        <article class="dikshant-project-card" data-project-id="forms" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_forms.svg" alt="Course Registration Form UI" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-orange">Form Design</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Project &amp; Deploy URL ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Course Registration Form — Typeform-Inspired</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">20+ Input Types</span>
+              <span class="badge-chip">Semantic HTML</span>
+              <span class="badge-chip">WCAG AA</span>
+              <span class="badge-chip">Mobile First</span>
+            </div>
+            <p class="card-desc">
+              Typeform-inspired registration form with 2 fieldsets, 20+ input types, inline validation, and WCAG AA
+              contrast.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight orange-glow">📉 30% Lower Drop-off</span>
+              <span class="open-link-text">Explore Project ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 4: Simple Calculator (from Code Alpha) ════ -->
+        <article class="dikshant-project-card" data-project-id="calculator" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_calculator.svg" alt="Simple Calculator App UI" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-purple">CodeAlpha Web</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Calculator &amp; Test Live ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Simple Calculator — Modern Web Engine</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">JavaScript</span>
+              <span class="badge-chip">CSS Grid</span>
+              <span class="badge-chip">Math Parser</span>
+              <span class="badge-chip">Responsive</span>
+            </div>
+            <p class="card-desc">
+              Interactive web calculator with instant evaluation, backspace manipulation, arithmetic operations, and
+              acrylic UI.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight purple-glow">🔢 Instant Evaluation</span>
+              <span class="open-link-text">Launch Calculator ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 5: Interactive Image Gallery (from Code Alpha) ════ -->
+        <article class="dikshant-project-card" data-project-id="gallery" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_gallery.svg" alt="Image Gallery UI Mockup" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-cyan">CodeAlpha Gallery</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Image Gallery ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Interactive Image Gallery — Lightbox &amp; Categories</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">Dynamic Lightbox</span>
+              <span class="badge-chip">Category Filters</span>
+              <span class="badge-chip">CSS Grid</span>
+              <span class="badge-chip">Anime Wallpapers</span>
+            </div>
+            <p class="card-desc">
+              Responsive photography gallery featuring categories (Nature, Animals, Wallpapers), smooth hover zoom, and
+              lightbox modal.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight cyan-glow">🖼️ Dynamic Lightbox Modal</span>
+              <span class="open-link-text">Launch Gallery ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 6: Tables · Data Notebook ════ -->
+        <article class="dikshant-project-card" data-project-id="tables" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_tables.svg" alt="Tables Project Mockup" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-green">Data UI Project</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Open Data Tables Explorer ↗</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Tables — Data Notebook &amp; Layout Architect</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">Colspan &amp; Rowspan</span>
+              <span class="badge-chip">University Timetable</span>
+              <span class="badge-chip">Semantic HTML</span>
+              <span class="badge-chip">A11y Grids</span>
+            </div>
+            <p class="card-desc">
+              Comprehensive reference of table architectures: compound colspan/rowspan, timetables, and responsive data
+              grids.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight green-glow">📊 100% W3C Validated</span>
+              <span class="open-link-text">Explore Tables ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 7: College Placement Prediction System (AI/ML) ════ -->
+        <article class="dikshant-project-card" data-project-id="placement" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_placement.svg" alt="Machine Learning Placement Prediction System"
+              class="card-thumb-img" loading="lazy">
+            <span class="badge-category badge-green">AI &amp; Machine Learning</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Run Interactive ML Inference Simulator ⚡</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">College Placement Prediction System</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">Python</span>
+              <span class="badge-chip">Scikit-learn</span>
+              <span class="badge-chip">Pandas</span>
+              <span class="badge-chip">Random Forest</span>
+            </div>
+            <p class="card-desc">
+              ML model trained on 2,000+ student records achieving 85% prediction accuracy with feature importance
+              analysis.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight green-glow">⚡ 85.2% Accuracy · Test Live</span>
+              <span class="open-link-text">Run Simulator ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 8: Water Level Monitoring & Toll Gate (IoT) ════ -->
+        <article class="dikshant-project-card" data-project-id="iot" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_iot_toll.svg" alt="IoT Water Level & Toll Gate Mockup"
+              class="card-thumb-img" loading="lazy">
+            <span class="badge-category badge-orange">IoT &amp; Hardware</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">Run Water Level &amp; Gate Simulation 🌊</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Water Level Monitoring &amp; Toll Gate System</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">Arduino UNO</span>
+              <span class="badge-chip">Ultrasonic HC-SR04</span>
+              <span class="badge-chip">Embedded C</span>
+              <span class="badge-chip">Servo Control</span>
+            </div>
+            <p class="card-desc">
+              IoT prototype automating water-level flood detection and smart toll gate barrier operation with 95% sensor
+              accuracy.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight orange-glow">🌊 95% Accuracy · Test Gate</span>
+              <span class="open-link-text">Launch Simulator ↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ════ PROJECT 9: HOPE Orphanage (Android Application) ════ -->
+        <article class="dikshant-project-card" data-project-id="orphanage" tabindex="0" role="button"
+          aria-haspopup="dialog">
+          <div class="card-thumb-wrap">
+            <img src="assets/images/project_orphanage.svg" alt="HOPE Orphanage Android App" class="card-thumb-img"
+              loading="lazy">
+            <span class="badge-category badge-purple">Android &amp; Backend</span>
+            <div class="card-hover-mask">
+              <span class="hover-btn-text">View Architecture &amp; REST APIs 📊</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">HOPE Orphanage — Android Application</h3>
+              <span class="card-arrow-icon">↗</span>
+            </div>
+            <div class="chips-row-mini">
+              <span class="badge-chip">Java Android</span>
+              <span class="badge-chip">PHP REST</span>
+              <span class="badge-chip">MySQL</span>
+              <span class="badge-chip">GPS Tagging</span>
+            </div>
+            <p class="card-desc">
+              Android app for orphan welfare reporting with GPS-based tagging and 6 REST APIs on a MySQL backend.
+            </p>
+            <div class="card-footer-strip">
+              <span class="metric-highlight purple-glow">📡 99% Retrieval Accuracy</span>
+              <span class="open-link-text">View Architecture ↗</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         SKILLS SECTION (Dikshant Aesthetic: Glowing Badges & Doodles)
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper skills-dikshant-section" id="skills">
+      <div class="skills-panel-wrapper">
+
+        <!-- Header with Hand-Drawn "SKILLS" -->
+        <div class="skills-top-row">
+          <h2 class="skills-handwritten-title">SKILLS</h2>
+          <!-- Floating Doodle Swirls -->
+          <svg class="doodle-swirl-icon" width="60" height="40" viewBox="0 0 60 40" fill="none">
+            <path d="M 5,25 Q 15,5 30,20 Q 45,35 55,10" stroke="#7928ca" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="skills-category-pills">
+          <button class="skill-filter-btn active" data-filter="all">All Stack</button>
+          <button class="skill-filter-btn" data-filter="frontend">Front-End</button>
+          <button class="skill-filter-btn" data-filter="languages">Languages</button>
+          <button class="skill-filter-btn" data-filter="backend">Backend &amp; DB</button>
+          <button class="skill-filter-btn" data-filter="tools">Tools &amp; Design</button>
+        </div>
+
+        <!-- Tech Stack Badges Grid -->
+        <div class="tech-badges-grid" id="techBadgesContainer">
+
+          <!-- React -->
+          <div class="tech-badge-card" data-category="frontend">
+            <div class="tech-badge-icon icon-react">⚛️</div>
+            <span class="tech-badge-name">React</span>
+            <span class="tech-badge-sub">Components</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="tech-badge-card" data-category="frontend languages">
+            <div class="tech-badge-icon icon-js">⚡</div>
+            <span class="tech-badge-name">JavaScript</span>
+            <span class="tech-badge-sub">ES6+ / Async</span>
+          </div>
+
+          <!-- HTML5 -->
+          <div class="tech-badge-card" data-category="frontend">
+            <div class="tech-badge-icon icon-html">🌐</div>
+            <span class="tech-badge-name">HTML5</span>
+            <span class="tech-badge-sub">Semantic / A11y</span>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="tech-badge-card" data-category="frontend">
+            <div class="tech-badge-icon icon-css">🎨</div>
+            <span class="tech-badge-name">CSS3</span>
+            <span class="tech-badge-sub">Grid / Motion</span>
+          </div>
+
+          <!-- Java -->
+          <div class="tech-badge-card" data-category="languages backend">
+            <div class="tech-badge-icon icon-java">☕</div>
+            <span class="tech-badge-name">Java</span>
+            <span class="tech-badge-sub">OOP / Android</span>
+          </div>
+
+          <!-- Python -->
+          <div class="tech-badge-card" data-category="languages">
+            <div class="tech-badge-icon icon-python">🐍</div>
+            <span class="tech-badge-name">Python</span>
+            <span class="tech-badge-sub">Pandas / Scikit</span>
+          </div>
+
+          <!-- PHP -->
+          <div class="tech-badge-card" data-category="backend">
+            <div class="tech-badge-icon icon-php">🐘</div>
+            <span class="tech-badge-name">PHP</span>
+            <span class="tech-badge-sub">REST APIs</span>
+          </div>
+
+          <!-- MySQL -->
+          <div class="tech-badge-card" data-category="backend">
+            <div class="tech-badge-icon icon-mysql">🐬</div>
+            <span class="tech-badge-name">MySQL</span>
+            <span class="tech-badge-sub">Relational DB</span>
+          </div>
+
+          <!-- Hibernate -->
+          <div class="tech-badge-card" data-category="backend">
+            <div class="tech-badge-icon icon-hibernate">📦</div>
+            <span class="tech-badge-name">Hibernate</span>
+            <span class="tech-badge-sub">ORM Mapping</span>
+          </div>
+
+          <!-- Git -->
+          <div class="tech-badge-card" data-category="tools">
+            <div class="tech-badge-icon icon-git">🌿</div>
+            <span class="tech-badge-name">Git</span>
+            <span class="tech-badge-sub">Version Control</span>
+          </div>
+
+          <!-- GitHub -->
+          <div class="tech-badge-card" data-category="tools">
+            <div class="tech-badge-icon icon-github">🐙</div>
+            <span class="tech-badge-name">GitHub</span>
+            <span class="tech-badge-sub">CI / CD</span>
+          </div>
+
+          <!-- Figma -->
+          <div class="tech-badge-card" data-category="tools">
+            <div class="tech-badge-icon icon-figma">📐</div>
+            <span class="tech-badge-name">Figma</span>
+            <span class="tech-badge-sub">UI / UX</span>
+          </div>
+
+          <!-- XAMPP -->
+          <div class="tech-badge-card" data-category="backend tools">
+            <div class="tech-badge-icon icon-xampp">🖥️</div>
+            <span class="tech-badge-name">XAMPP</span>
+            <span class="tech-badge-sub">Apache / SQL</span>
+          </div>
+
+          <!-- Excel -->
+          <div class="tech-badge-card" data-category="tools">
+            <div class="tech-badge-icon icon-excel">📊</div>
+            <span class="tech-badge-name">Excel</span>
+            <span class="tech-badge-sub">Analytics</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         ABOUT ME SECTION (Split Card with "Focus Discipline Consistency")
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper about-dikshant-section" id="about">
+      <div class="about-split-container">
+
+        <!-- Left: Graffiti Character Card -->
+        <div class="about-character-card-wrap">
+          <img src="assets/images/sushmanth_about_card.svg" alt="Focus Discipline Consistency Graffiti Art"
+            class="about-graffiti-card-img" loading="lazy">
+        </div>
+
+        <!-- Right: Bio Information -->
+        <div class="about-details-wrap">
+          <h2 class="about-details-title">ABOUT ME</h2>
+          <p class="about-details-lead">
+            I'm <strong>Dommaraju Sushmanth Varma</strong>, a Computer Science Engineering graduate from
+            <strong>Saveetha School of Engineering</strong> (CGPA 8.89), passionate about crafting interactive,
+            high-impact digital experiences.
+          </p>
+          <p class="about-details-body">
+            I love turning ambitious ideas into playful, impactful visuals and scalable software. Whether building
+            responsive web front-ends with smooth micro-interactions, structuring accessible semantic code, or training
+            predictive machine learning models, I enjoy building solutions that entertain, connect, and leave a lasting
+            impression.
+          </p>
+
+          <!-- Core Value Pills -->
+          <div class="about-value-chips">
+            <span class="val-chip chip-green">⚡ Clean &amp; Semantic Code</span>
+            <span class="val-chip chip-cyan">📱 Fully Responsive</span>
+            <span class="val-chip chip-purple">🎯 Pixel-Perfect Design</span>
+            <span class="val-chip chip-orange">🚀 Performance Optimized</span>
+          </div>
+
+          <div class="about-actions-row">
+            <button type="button" class="btn-know-more" id="openAboutBioBtn">
+              <span>Know More About Me</span>
+              <span class="circle-arrow">↗</span>
+            </button>
+            <a href="assets/docs/sushmanth-resume.pdf" download="sushmanth-resume.pdf" class="btn-cv-download">
+              <span>Download Resume PDF ↓</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         NUMBERS THAT DEFINE ME (Animated Stats)
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper stats-section" id="numbers">
+      <div class="stats-panel">
+        <h2 class="stats-heading">NUMBERS THAT DEFINE ME</h2>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-figure" data-target="9" data-suffix="+">0</div>
+            <div class="stat-caption">PROJECTS BUILT</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-figure" data-target="2000" data-suffix="+">0</div>
+            <div class="stat-caption">RECORDS ANALYZED</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-figure" data-target="30" data-suffix="">0</div>
+            <div class="stat-caption">DESTINATIONS MAPPED</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-figure" data-target="100" data-suffix="%">0</div>
+            <div class="stat-caption">W3C VALIDATION</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-figure" data-target="8.89" data-decimals="2" data-suffix="">0</div>
+            <div class="stat-caption">B.E CSE CGPA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         CERTIFICATIONS SECTION
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper certs-section" id="certifications">
+      <div class="section-header-dikshant">
+        <h2 class="section-heading-dikshant">CERTIFICATIONS</h2>
+      </div>
+
+      <div class="certs-cards-list">
+        <div class="cert-card">
+          <div class="cert-icon-wrap icon-oracle">🛡️</div>
+          <div class="cert-content">
+            <h4 class="cert-name">Oracle Cloud Infrastructure: MySQL &amp; AI Vector Search</h4>
+            <p class="cert-org">Oracle University · Cloud Infrastructure &amp; AI Vector Search</p>
+          </div>
+          <span class="cert-badge-tag badge-cyan">Verified</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon-wrap icon-gl">⭐</div>
+          <div class="cert-content">
+            <h4 class="cert-name">Great Learning: Java Programming &amp; Python Programming</h4>
+            <p class="cert-org">Great Learning Academy · OOP &amp; Core Data Structures</p>
+          </div>
+          <span class="cert-badge-tag badge-green">Verified</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon-wrap icon-nptel">🎓</div>
+          <div class="cert-content">
+            <h4 class="cert-name">NPTEL (IIT Madras): Internet of Things — Score 69%</h4>
+            <p class="cert-org">National Programme on Technology Enhanced Learning · Elite Credential</p>
+          </div>
+          <span class="cert-badge-tag badge-orange">Elite Score 69%</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon-wrap icon-genai">🤖</div>
+          <div class="cert-content">
+            <h4 class="cert-name">Workshop: Generative AI (GenAI) &amp; LLM Engineering</h4>
+            <p class="cert-org">Hands-on Bootcamp · Vector Embeddings &amp; Prompt Workflows</p>
+          </div>
+          <span class="cert-badge-tag badge-purple">Completed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         EDUCATION SECTION
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper education-section" id="education">
+      <div class="section-header-dikshant">
+        <h2 class="section-heading-dikshant">EDUCATION</h2>
+      </div>
+
+      <div class="edu-timeline-dark">
+        <div class="edu-card-dark">
+          <div class="edu-badge-year">2022 – 2026</div>
+          <h4 class="edu-degree-title">Bachelor of Engineering — Computer Science</h4>
+          <p class="edu-inst-title">Saveetha School of Engineering, Chennai</p>
+          <div class="edu-tags-row">
+            <span class="val-chip chip-green">CGPA: 8.89 / 10.0</span>
+            <span class="val-chip chip-cyan">Front-End &amp; AI/ML Track</span>
+          </div>
+        </div>
+
+        <div class="edu-card-dark">
+          <div class="edu-badge-year">2020 – 2022</div>
+          <h4 class="edu-degree-title">Intermediate (MPC — Maths, Physics, Chemistry)</h4>
+          <p class="edu-inst-title">Sri Bhopal Junior College, Tirupati</p>
+          <div class="edu-tags-row">
+            <span class="val-chip chip-orange">Score: 89%</span>
+          </div>
+        </div>
+
+        <div class="edu-card-dark">
+          <div class="edu-badge-year">2019 – 2020</div>
+          <h4 class="edu-degree-title">Secondary School Certificate (SSC)</h4>
+          <p class="edu-inst-title">Raju High School, Rajampet</p>
+          <div class="edu-tags-row">
+            <span class="val-chip chip-green">Perfect Score: 100%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         LET'S MAKE SOMETHING DOPE! (Contact & Footer)
+    ════════════════════════════════════════════════════════════ -->
+    <section class="section-wrapper contact-dikshant-section" id="contact">
+      <div class="contact-banner-dark">
+
+        <div class="contact-header-wrap">
+          <h2 class="contact-big-title">
+            LET'S MAKE<br>
+            SOMETHING <span class="neon-pill-dope">DOPE!</span>
+          </h2>
+          <p class="contact-subtitle-dark">
+            Got an ambitious project, an engineering opening, or just want to connect? Let's build something remarkable.
+          </p>
+        </div>
+
+        <!-- Contact Pills & Quick Actions -->
+        <div class="contact-details-bar">
+          <button type="button" class="contact-pill-item" id="copyEmailBtn" data-email="sushmanthdommaraju@gmail.com">
+            <span class="pill-icon-dark">✉️</span>
+            <span class="pill-value">sushmanthdommaraju@gmail.com</span>
+            <span class="copy-tag">Copy</span>
+          </button>
+
+          <a href="tel:+919121957737" class="contact-pill-item">
+            <span class="pill-icon-dark">📞</span>
+            <span class="pill-value">+91 91219 57737</span>
+            <span class="copy-tag">Call</span>
+          </a>
+
+          <div class="contact-pill-item static-pill">
+            <span class="pill-icon-dark">📍</span>
+            <span class="pill-value">Chennai, India</span>
+          </div>
+        </div>
+
+        <!-- Quick Message Form -->
+        <div class="contact-form-dark-wrap">
+          <form id="contactForm" class="contact-form-dark" novalidate>
+            <div class="form-row-2">
+              <div class="form-field-dark">
+                <label for="senderName">Your Name</label>
+                <input type="text" id="senderName" class="dark-input" placeholder="Alex Morgan" required>
+                <span class="field-error" id="nameError"></span>
+              </div>
+              <div class="form-field-dark">
+                <label for="senderEmail">Your Email</label>
+                <input type="email" id="senderEmail" class="dark-input" placeholder="alex@company.com" required>
+                <span class="field-error" id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="form-field-dark">
+              <label for="senderSubject">Subject</label>
+              <input type="text" id="senderSubject" class="dark-input" placeholder="Project Inquiry / Job Opportunity"
+                required>
+            </div>
+
+            <div class="form-field-dark">
+              <label for="senderMessage">Message</label>
+              <textarea id="senderMessage" rows="4" class="dark-input dark-textarea"
+                placeholder="Tell me about what you are building..." required></textarea>
+              <span class="field-error" id="messageError"></span>
+            </div>
+
+            <div class="form-actions-dark">
+              <button type="submit" class="btn-submit-dark" id="submitFormBtn">
+                <span>Send Message</span>
+                <span class="arrow-glyph">→</span>
+              </button>
+              <span class="response-time-note">⚡ Usually replies within 24 hours</span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Footer Bar with Social Links & Mascot Doodle -->
+        <div class="footer-bottom-bar">
+          <div class="footer-copy-text">
+            © 2025 Dommaraju Sushmanth Varma · Built with Passion, Clean Code &amp; Imagination
+          </div>
+
+          <div class="footer-social-cluster">
+            <a href="https://linkedin.com/in/sushmanth-dommaraju" target="_blank" rel="noopener noreferrer"
+              class="social-round-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://github.com/sushmanth-varma" target="_blank" rel="noopener noreferrer"
+              class="social-round-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href="mailto:sushmanthdommaraju@gmail.com" class="social-round-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+
+          <a href="#hero" class="back-top-pill">Back to Top ↑</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════════
+       DYNAMIC PROJECT MODAL DIALOG (Live Deploy URL Manager, ML Simulator, IoT Simulator)
+    ════════════════════════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-window">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-titles">
+          <span class="modal-category-chip" id="modalCategoryChip">CATEGORY</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal dialog">✕</button>
+      </div>
+
+      <!-- Modal Body (Injected dynamically via script.js) -->
+      <div class="modal-body" id="modalBodyContent">
+        <!-- Content injected here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
